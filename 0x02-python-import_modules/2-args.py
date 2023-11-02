@@ -3,9 +3,14 @@
 import sys
 
 if __name__ == "__main__":
-    total = 0
+    argc = len(sys.argv) - 1
 
-    for arg in sys.argv[1:]:
-        total += int(arg)
+    if argc == 0:
+        print("0 arguments.")
+    elif argc == 1:
+        print("1 argument:")
+    else:
+        print("{} arguments:".format(argc))
 
-    print(total)
+    for x in range(argc):
+        print("{}: {}".format(x + 1, sys.argv[x + 1]))
