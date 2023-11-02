@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
@@ -13,4 +14,4 @@ if __name__ == "__main__":
     print("{} + {} = {}".format(a, b, result_add))
     print("{} - {} = {}".format(a, b, result_sub))
     print("{} * {} = {}".format(a, b, result_mul))
-    print("{} / {} = {}".format(a, b, result_div)
+    print("{} / {} = {}".format(a, b, result_div))
