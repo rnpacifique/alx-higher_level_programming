@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-number = 0
-while number <= 89:
-    if  number % 10 == 0:
-        number += 1 + number // 10
-    print("{:02d}".format(number), end='\n' if number == 89 else ", ")    
+
+for tens_digit in range(0, 10):
+    for ones_digit in range(tens_digit + 1, 10):
+        if tens_digit != 8 or ones_digit != 9:
+            print("{:d}{:d}, ".format(tens_digit, ones_digit), end="")
+
+print("89")  
