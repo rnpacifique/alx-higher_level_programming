@@ -36,7 +36,7 @@ class Square:
         else:
             for _ in range(self.__size):
                 print("#" * self.__size)
-
+ """Get/set the current size of the square"""
 
 if __name__ == "__main__":
     my_square = Square(3)
