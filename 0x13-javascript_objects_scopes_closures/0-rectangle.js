@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//this create an object class
-classass Rectangle {
+// this creates an objects class
+class Rectangle {
 }
-module.export = Rectangle;
+module.exports = Rectangle;
