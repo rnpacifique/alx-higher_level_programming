@@ -1,20 +1,26 @@
 #!/usr/bin/python3
-# Defines a State model.
-# Inherits from SQLAlchemy Base and links to the MySQL table states.
+"""
+The module to use SQLAlchemy.
+"""
 
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy.orm import declarative_base
 
-Base = declarative_base()
+
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
 
 class State(Base):
-    """Represents a state for a MySQL database.
-
-    __tablename__ (str): The name of the MySQL table to store States.
-    id (sqlalchemy.Integer): The state's id.
-    name (sqlalchemy.String): The state's name.
     """
-    __tablename__ = "states"
-    id = Column(Integer, primary_key=True)
+    This is the definition of the State class.
+    """
+
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True, nullable=False, unique=True)
     name = Column(String(128), nullable=False)
+
+if __name__ == "__main__":
+    db_engine = create_engine('mysql://your_username:your_password@localhost:3306/your_database')
+
+    Base.metadata.create_all(db_engine)
