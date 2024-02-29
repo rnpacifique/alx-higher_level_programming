@@ -1,3 +1,3 @@
 #!/bin/bash
-#this sends a requesst and gets the body from the passed Ip
-curl -s "$1" | wc -c
+# A Bash script that takes in a URL, sends a request to that URL
+curl -s "$1" -w "%{size_download}\n" -o /dev/null
